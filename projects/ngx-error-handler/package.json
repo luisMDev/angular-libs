@@ -1,0 +1,14 @@
+{
+  "name": "@luismdev/ngx-error-handler",
+  "version": "0.0.19",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/animations": "^17.3.0",
+    "ngx-toastr": "^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

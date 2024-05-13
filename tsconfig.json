@@ -9,6 +9,17 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ngx-error-handler": [
+        "./dist/ngx-error-handler"
+      ],
+      "ngx-fire": [
+        "./dist/ngx-fire"
+      ],
+      "ngx-utils": [
+        "./dist/ngx-utils"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
