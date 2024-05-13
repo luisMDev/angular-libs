@@ -1,0 +1,73 @@
+@import 'mixins.scss';
+// code {
+//   background-color: transparent !important;
+//   min-height: 400px;
+// }
+.angular-editor-toolbar {
+  position: sticky;
+  top: 78px;
+  background: hsla(var(--lmd-bg-600), 1);
+  z-index: 100000000;
+}
+.text-editor {
+  @include box(100%, auto);
+  position: relative;
+  z-index: 1000;
+  .angular-editor {
+    width: auto;
+    min-width: 0px;
+    border: 1px solid !important;
+    background: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    border-radius: var(--lmd-border-radius-2) !important;
+    backdrop-filter: blur(15px);
+    // overflow: hidden;
+    .angular-editor-textarea {
+      min-height: 400px !important;
+    }
+    .angular-editor-toolbar {
+      background-color: transparent !important;
+      border: 0 !important;
+      display: flex;
+      flex-wrap: wrap !important;
+      gap: var(--lmd-p-2);
+      padding: var(--lmd-p-1);
+    }
+    .angular-editor-textarea {
+      border: 0 !important;
+    }
+    .angular-editor-toolbar-set {
+      display: flex !important;
+      gap: var(--lmd-p-0);
+      //   flex: 1;
+      //   gap: var(--lmd-p-2);
+      button {
+        background-color: var(--input-bg) !important;
+        border: none !important;
+        padding: var(--lmd-p-1) var(--lmd-p-2) !important;
+        // border: 1px solid var(--input-border) !important;
+        border-radius: var(--lmd-border-radius-2) !important;
+        height: 32px !important;
+        i {
+          color: hsla(var(--lmd-text-500), 1);
+        }
+        // &:nth-child(1) {
+        //   border-radius: 100px 0 0 100px !important;
+        //   border-left: 1px solid var(--input-border) !important;
+        // }
+        // &:last-child {
+        //   border-radius: 0 100px 100px 0 !important;
+        // }
+      }
+    }
+  }
+  ae-select {
+    height: 32px !important;
+  }
+  .ae-picker-label:before {
+    background: transparent !important;
+  }
+  .ae-picker {
+    height: 100% !important;
+  }
+}

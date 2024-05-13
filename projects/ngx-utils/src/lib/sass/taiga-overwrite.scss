@@ -1,0 +1,189 @@
+:root {
+  --tui-duration: 0s;
+  --tui-link: hsla(var(--lmd-link), 1);
+  --tui-link-hover: hsla(var(--lmd-link-hover), 1);
+
+  --tui-primary: hsla(var(--lmd-primary-500), 1);
+  --tui-primary-hover: hsla(var(--lmd-primary-400), 1);
+  --tui-primary-active: hsla(var(--lmd-primary-600), 1);
+  --tui-primary-text: hsla(var(--lmd-text-500), 1);
+
+  --tui-secondary: hsla(var(--lmd-secondary-500), 1);
+  --tui-secondary-hover: hsla(var(--lmd-secondary-400), 1);
+  --tui-secondary-active: hsla(var(--lmd-secondary-600), 1);
+  --tui-secondary-text: hsla(var(--lmd-text-500), 1);
+
+  --tui-accent: #ff7043;
+  --tui-accent-hover: #ff9a94;
+  --tui-accent-active: #e7716a;
+  --tui-accent-text: #fff;
+
+  --tui-elevation-01: hsla(var(--lmd-bg-500), 1);
+  --tui-elevation-02: hsla(var(--lmd-bg-400), 1);
+  --tui-elevation-03: hsla(var(--lmd-bg-300), 1);
+  --tui-elevation-04: hsla(var(--lmd-bg-200), 1);
+  --tui-elevation-05: hsla(var(--lmd-bg-2000), 1);
+
+  --tui-base-01: hsl(240 5% 8%);
+  --tui-base-02: hsl(240 6% 10%);
+  --tui-base-03: hsl(240 4% 18%);
+  --tui-base-04: hsl(240 4% 18%);
+  --tui-base-09: hsla(var(--lmd-text-500), 1);
+
+  --tui-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12);
+  --tui-shadow-hover: 0 0.75rem 2.25rem rgba(0, 0, 0, 0.2);
+  --tui-shadow-dropdown: 0 1.5rem 1rem rgba(0, 0, 0, 0.03), 0 0.75rem 0.75rem rgba(0, 0, 0, 0.04), 0 0.25rem 0.375rem rgba(0, 0, 0, 0.05);
+  --tui-shadow-modal: 0 1.125rem 1.875rem rgba(0, 0, 0, 0.48);
+  --tui-shadow-sidebar: 0.25rem 0 1.5rem rgba(0, 0, 0, 0.12);
+  --tui-shadow-navigation: 0 0.125rem 1rem rgba(0, 0, 0, 0.08);
+  --tui-shadow-sheet: 0 -1rem 1.75rem rgba(0, 0, 0, 0.24);
+
+  --tui-radius-xs: var(--lmd-border-radius-0);
+  --tui-radius-s: var(--lmd-border-radius-1);
+  --tui-radius-m: var(--lmd-border-radius-2);
+  --tui-radius-l: var(--lmd-border-radius-3);
+  --tui-radius-xl: var(--lmd-border-radius-4);
+  --t-radius: var(--lmd-border-radius-4);
+
+  --tui-height-xs: 1.5rem;
+  --tui-height-s: 2rem;
+  --tui-height-m: 2.5rem;
+  --tui-height-l: 3.5rem;
+
+  --tui-font-text: var(--tui-text-font);
+  --tui-font-text-xl: normal 1.1875rem/1.75rem var(--tui-font-text);
+  --tui-font-text-l: normal 1.0625rem/1.75rem var(--tui-font-text);
+  --tui-font-text-l-2: normal 1.0625rem/1.5rem var(--tui-font-text);
+  --tui-font-text-m: normal 0.875rem var(--tui-font-text);
+  --tui-font-text-m-2: normal 1rem/1.25rem var(--tui-font-text);
+  --tui-font-text-s: normal 0.8125rem/1.25rem var(--tui-font-text);
+  --tui-font-text-s-2: normal 0.8125rem/1rem var(--tui-font-text);
+  --tui-font-text-xs: normal 0.6875rem/1rem var(--tui-font-text);
+  --tui-font-text-xs-2: normal 0.6875rem/0.8125rem var(--tui-font-text);
+
+  --tui-heading-font: Inter, arial, sans-serif;
+  --tui-text-font: Inter, arial, sans-serif;
+
+  --tui-text-01: hsla(var(--lmd-text-500), 1);
+  --tui-text-02: hsla(var(--lmd-text-700), 1);
+  --tui-text-03: hsla(var(--lmd-text-800), 1);
+}
+
+[tuiWrapper][data-appearance='flat'] {
+  color: hsla(var(--lmd-text-500), 1);
+  &:hover {
+    color: hsla(var(--lmd-text-400), 1);
+    background: transparent !important;
+  }
+}
+
+[tuiWrapper][data-appearance='textfield'] {
+  background: hsla(var(--lmd-bg-500), 1);
+  // border: solid 1px hsla(var(--lmd-bg-400), 1);
+  border: none;
+  box-shadow: none;
+}
+
+tui-tabs {
+  box-shadow: inset 0 -1px hsla(var(--lmd-bg-400), 1);
+}
+
+tui-dialog[data-appearance='sidebar'] {
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  width: 800px !important;
+  right: 0;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  background: hsla(var(--lmd-bg-600), 1);
+  animation: none !important;
+  > .t-heading {
+    margin-bottom: var(--lmd-p-6) !important;
+  }
+  > .t-content {
+    animation: none !important;
+    height: 100%;
+    background: hsla(var(--lmd-bg-600), 1);
+    overflow: auto;
+  }
+}
+
+table {
+  background: hsla(var(--lmd-bg-500), 1);
+  border: solid 1px hsla(var(--lmd-bg-400), 1);
+  box-shadow: var(--shadow-small);
+  border-radius: var(--lmd-border-radius-4);
+  padding-bottom: var(--lmd-p-1);
+  &.clickable {
+    tbody tr {
+      cursor: pointer;
+      &:hover {
+        background: hsla(var(--lmd-bg-400), 1);
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:last-of-type {
+        td {
+          border-bottom: none !important;
+        }
+      }
+    }
+  }
+  &.hoverable {
+    tbody tr {
+      &:hover {
+        background: hsla(var(--lmd-bg-400), 1);
+      }
+    }
+  }
+  th,
+  td {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: solid 1px hsla(var(--lmd-bg-400), 1) !important;
+    img {
+      @include flex(row, center, center);
+      width: 30px;
+      height: 30px;
+      background: hsla(var(--lmd-bg-400), 1);
+      border-radius: var(--lmd-border-radius-3);
+      padding: var(--lmd-p-0);
+    }
+  }
+
+  th {
+    border-bottom: solid 1px hsla(var(--lmd-bg-400), 1) !important;
+  }
+}
+
+button {
+  .t-content {
+    gap: var(--lmd-p-2);
+  }
+}
+
+label {
+  width: 100%;
+  .t-label {
+    margin-bottom: var(--lmd-p-1);
+    margin-bottom: var(--lmd-p-1) !important;
+    color: hsla(var(--lmd-text-500), 1);
+    font-weight: 500;
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+small {
+  width: 100%;
+  display: block;
+}
+
+.t-dialog {
+  animation: none !important;
+}

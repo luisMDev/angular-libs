@@ -1,9 +1,10 @@
 {
-  "name": "ngx-utils",
-  "version": "0.0.1",
+  "name": "@luismdev/ngx-utils",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/core": "^17.3.0",
+    "@ngrx/router-store": "^17.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -1,0 +1,220 @@
+.ngx-datatable {
+  box-shadow: none;
+  background: hsla(var(--lmd-bg-600), 1);
+  color: hsla(var(--lmd-text-600), 1);
+  font-size: 14px;
+  border-radius: var(--lmd-border-radius-2);
+
+  &.multi-click-selection {
+    .datatable-body-row {
+      cursor: pointer;
+    }
+  }
+
+  .datatable-header {
+    display: flex !important;
+    align-items: center !important;
+    background: hsla(var(--lmd-bg-400), 1);
+    font-family: var(--lmd-font-family-1);
+    color: hsla(var(--lmd-text-600), 1);
+    height: 50px !important;
+    width: 100%;
+    .datatable-header-cell {
+      font-size: 13px;
+      color: hsla(var(--lmd-text-500), 1);
+      text-align: left;
+      padding: 1rem 1.1rem;
+      padding: var(--lmd-p-1) var(--lmd-p-2);
+      .datatable-header-cell-label {
+        line-height: 24px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        color: hsla(var(--lmd-text-600), 1);
+      }
+      .sort-btn {
+        margin-left: var(--lmd-p-0);
+      }
+    }
+    .empty-header {
+      opacity: 0;
+    }
+  }
+
+  .datatable-body {
+    .empty-row {
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--lmd-font-size-3);
+    }
+
+    .datatable-body-row {
+      background-color: hsla(var(--lmd-bg-500), 1);
+      border-bottom: 1px solid;
+      border-color: hsla(var(--lmd-bg-400), 1);
+
+      &:hover {
+        background-color: hsla(var(--lmd-bg-300), 1);
+        color: hsla(var(--lmd-text-500), 1);
+        transition-property: background;
+        transition-duration: 0.15s;
+      }
+
+      .datatable-body-cell {
+        text-align: left;
+        padding: var(--lmd-p-1) var(--lmd-p-2);
+        vertical-align: top;
+        display: flex;
+        align-items: center;
+        line-height: initial;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 41px;
+        &-label {
+          width: 100%;
+        }
+      }
+
+      &.active {
+        background-color: rgba(37, 150, 120, 0.1);
+        color: hsla(var(--lmd-text-500), 1);
+        border-color: transparent;
+        &:hover {
+          background-color: rgba(0, 230, 169, 0.2) !important;
+          color: hsla(var(--lmd-text-500), 1);
+        }
+      }
+    }
+  }
+
+  .datatable-footer {
+    background: hsla(var(--lmd-bg-400), 1);
+    color: hsla(var(--lmd-text-600), 1);
+    margin-top: -1px;
+    height: 100%;
+    .page-count {
+      line-height: 50px;
+      height: 50px;
+      padding: 0 1.2rem;
+    }
+
+    .datatable-pager {
+      margin: 0 10px;
+      vertical-align: top;
+
+      ul {
+        li {
+          margin: 10px 0px;
+          color: hsla(var(--lmd-text-500), 1);
+          &:not(.disabled) {
+            &.active a,
+            &:hover a {
+              background-color: hsla(var(--lmd-bg-200), 1);
+              color: hsla(var(--lmd-primary-500), 1);
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      a {
+        height: 22px;
+        min-width: 24px;
+        line-height: 22px;
+        padding: 0;
+        border-radius: 3px;
+        margin: 0 3px;
+        text-align: center;
+        vertical-align: top;
+        text-decoration: none;
+        vertical-align: bottom;
+        color: hsla(var(--lmd-text-500), 1);
+      }
+
+      .datatable-icon-left,
+      .datatable-icon-skip,
+      .datatable-icon-right,
+      .datatable-icon-prev {
+        font-size: 18px;
+        line-height: 27px;
+        padding: 0 3px;
+      }
+    }
+  }
+
+  .datatable-summary-row {
+    .datatable-body-row {
+      background-color: hsla(var(--lmd-bg-200), 1);
+
+      &:hover {
+        background-color: hsla(var(--lmd-bg-200), 1);
+      }
+
+      .datatable-body-cell {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/**
+ * Checkboxes ngx-datatable
+**/
+.datatable-checkbox {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+
+  input[type='checkbox'] {
+    position: relative;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+    outline: none;
+
+    &:before {
+      transition: all 0.15s ease-in-out;
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: 1;
+      width: var(--lmd-p-3);
+      height: var(--lmd-p-3);
+      border: 2px solid;
+      border-color: hsla(var(--lmd-bg-300), 1);
+      border-radius: var(--lmd-border-radius-0);
+    }
+
+    &:checked:before {
+      transform: rotate(-45deg);
+      height: 0.45rem;
+      border-color: hsla(var(--lmd-primary-500), 1);
+      border-top-style: none;
+      border-right-style: none;
+      top: 2px;
+    }
+
+    &:checked:after {
+      background: #285651;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: var(--lmd-p-3);
+      height: var(--lmd-p-3);
+      background: hsla(var(--lmd-bg-500), 1);
+      cursor: pointer;
+      border-radius: var(--lmd-border-radius-0);
+    }
+  }
+}

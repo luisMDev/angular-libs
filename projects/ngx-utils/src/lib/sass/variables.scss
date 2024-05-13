@@ -1,0 +1,198 @@
+:root {
+  --lmd-primary-100: 184, 82.1%, 89%;
+  --lmd-primary-200: 184, 82.1%, 78%;
+  --lmd-primary-300: 183, 82.1%, 67.1%;
+  --lmd-primary-400: 184, 82.1%, 50%;
+  --lmd-primary-500: 184, 100%, 37%;
+  --lmd-primary-600: 184, 100%, 30%;
+  --lmd-primary-700: 183, 100%, 25%;
+  --lmd-primary-800: 184, 100%, 18%;
+  --lmd-primary-900: 184, 100%, 9%;
+
+  --lmd-secondary-100: 220, 1.7%, 65.7%;
+  --lmd-secondary-200: 216, 2%, 48.8%;
+  --lmd-secondary-300: 214, 14%, 20%;
+  --lmd-secondary-400: 218, 11%, 16%;
+  --lmd-secondary-500: 214, 11%, 14%;
+  --lmd-secondary-600: 216, 11.1%, 8.8%;
+  --lmd-secondary-700: 220, 10.3%, 5.7%;
+  --lmd-secondary-800: 240, 6.7%, 2.9%;
+  --lmd-secondary-900: 240, 6.7%, 2.9%;
+
+  --lmd-tertiary-100: 240, 1.1%, 82.9%;
+  --lmd-tertiary-200: 220, 1.7%, 65.7%;
+  --lmd-tertiary-300: 216, 2%, 48.8%;
+  --lmd-tertiary-400: 214, 4.3%, 31.6%;
+  --lmd-tertiary-500: 218, 11%, 15%;
+  --lmd-tertiary-600: 214, 11.9%, 11.6%;
+  --lmd-tertiary-700: 216, 11.1%, 8.8%;
+  --lmd-tertiary-800: 220, 10.3%, 5.7%;
+  --lmd-tertiary-900: 240, 6.7%, 2.9%;
+
+  --lmd-bg-100: 240, 2%, 50%;
+  --lmd-bg-200: 240, 3%, 40%;
+  --lmd-bg-300: 240, 4%, 30%;
+  --lmd-bg-400: 240, 5%, 16%;
+  --lmd-bg-500: 240, 5%, 12%;
+  --lmd-bg-600: 240, 6%, 10%;
+  --lmd-bg-700: 240, 5%, 8%;
+  --lmd-bg-800: 240, 4%, 6%;
+  --lmd-bg-900: 240, 3%, 3%;
+  --lmd-bg-1000: 240, 1%, 1%;
+
+  /* Text Colors */
+  --lmd-text-100: 240, 33.3%, 98.8%;
+  --lmd-text-200: 240, 16.7%, 97.6%;
+  --lmd-text-300: 240, 22.2%, 96.5%;
+  --lmd-text-400: 240, 16.7%, 95.3%;
+  --lmd-text-500: 222deg, 5%, 90%;
+  --lmd-text-600: 222deg, 5%, 62%;
+  --lmd-text-700: 222deg, 5%, 52%;
+  --lmd-text-800: 222deg, 6%, 42%;
+  --lmd-text-900: 222deg, 7%, 30%;
+
+  /* Common Colors */
+  --lmd-blue-100: 184, 82.1%, 89%;
+  --lmd-blue-200: 184, 82.1%, 78%;
+  --lmd-blue-300: 183, 82.1%, 67.1%;
+  --lmd-blue-400: 184, 82.1%, 56.1%;
+  --lmd-blue-500: 184, 100%, 45.1%;
+  --lmd-blue-600: 184, 100%, 36.1%;
+  --lmd-blue-700: 183, 100%, 27.1%;
+  --lmd-blue-800: 184, 100%, 18%;
+  --lmd-blue-900: 184, 100%, 9%;
+
+  --lmd-yellow-100: 45, 84.6%, 92.4%;
+  --lmd-yellow-200: 45, 87%, 84.9%;
+  --lmd-yellow-300: 45, 86.1%, 77.5%;
+  --lmd-yellow-400: 44, 94%, 62;
+  --lmd-yellow-500: 44, 99%, 51;
+  --lmd-yellow-600: 45, 52%, 50;
+  --lmd-yellow-700: 45, 51.8%, 37.5%;
+  --lmd-yellow-800: 45, 52.8%, 24.9%;
+  --lmd-yellow-900: 45, 52.4%, 12.4%;
+
+  --lmd-green-100: 155, 67%, 45%;
+  --lmd-green-200: 155, 67%, 45%;
+  --lmd-green-300: 155, 67%, 45%;
+  --lmd-green-400: 155, 67%, 45%;
+  --lmd-green-500: 148, 100%, 43%;
+  --lmd-green-600: 155, 67%, 45%;
+  --lmd-green-700: 155, 67%, 45%;
+  --lmd-green-800: 155, 67%, 45%;
+  --lmd-green-900: 155, 67%, 45%;
+
+  --lmd-pink-100: 298, 84.6%, 92.4%;
+  --lmd-pink-200: 299, 82.3%, 84.5%;
+  --lmd-pink-300: 299, 83.1%, 76.9%;
+  --lmd-pink-400: 299, 82.3%, 69%;
+  --lmd-pink-500: 299, 82.7%, 61.4%;
+  --lmd-pink-600: 299, 52%, 49%;
+  --lmd-pink-700: 299, 52.1%, 36.9%;
+  --lmd-pink-800: 299, 52%, 24.5%;
+  --lmd-pink-900: 298, 52.4%, 12.4%;
+
+  --lmd-red-100: 0, 95%, 92.2%;
+  --lmd-red-200: 359, 95%, 84.3%;
+  --lmd-red-300: 0, 96.6%, 76.9%;
+  --lmd-red-400: 0, 96.2%, 69%;
+  --lmd-red-500: 360, 96%, 61%;
+  --lmd-red-600: 0, 60.8%, 49%;
+  --lmd-red-700: 0, 60.6%, 36.9%;
+  --lmd-red-800: 359, 61.3%, 24.3%;
+  --lmd-red-900: 0, 61.3%, 12.2%;
+
+  --lmd-discord: #7289da;
+  --lmd-twitch: #772ce8;
+  --lmd-twitch-ligth: #9147ff;
+  --lmd-youtube: #ff0000;
+  --lmd-facebook: #3b5998;
+  --lmd-trovo: #3cdb7d;
+  --lmd-google: #fff;
+  --lmd-twitter: #1ca1f2;
+  --lmd-instagram: #dd2a7b;
+  --lmd-other: #c4c8c5;
+
+  --lmd-link: 208, 100%, 62%;
+  --lmd-link-hover: 208, 70%, 52%;
+
+  /* Font size styles */
+  --lmd-font-size-0: 11px;
+  --lmd-font-size-1: 13px;
+  --lmd-font-size-2: 14px;
+  --lmd-font-size-3: 16px;
+  --lmd-font-size-4: 18px;
+  --lmd-font-size-5: 20px;
+  --lmd-font-size-6: 24px;
+  --lmd-font-size-7: 30px;
+  --lmd-font-size-8: 36px;
+  --lmd-font-size-9: 48px;
+  --lmd-font-size-10: 60px;
+  --lmd-font-size-11: 72px;
+  --lmd-font-size-12: 84px;
+  --lmd-font-size-13: 96px;
+
+  /* Spaces styles */
+  --lmd-p-0: 4px;
+  --lmd-p-1: 8px;
+  --lmd-p-2: 12px;
+  --lmd-p-3: 16px;
+  --lmd-p-4: 24px;
+  --lmd-p-5: 32px;
+  --lmd-p-6: 48px;
+  --lmd-p-7: 64px;
+  --lmd-p-8: 96px;
+  --lmd-p-9: 128px;
+  --lmd-p-10: 160px;
+  --lmd-p-11: 192px;
+
+  /* Font family styles */
+  --lmd-font-family-1: 'Josefin', sans-serif;
+  --lmd-font-family-2: 'Mondo-Black', sans-serif;
+
+  /* Line heigh styles */
+  --lmd-font-line-height-0: 1;
+  --lmd-font-line-height-1: 1.25;
+  --lmd-font-line-height-2: 1.5;
+  --lmd-font-line-height-3: 2;
+
+  /* Borders Styles*/
+  --lmd-border-radius-0: 4px;
+  --lmd-border-radius-1: 6px;
+  --lmd-border-radius-2: 8px;
+  --lmd-border-radius-3: 10px;
+  --lmd-border-radius-4: 15px;
+  --lmd-border-radius-5: 20px;
+  --lmd-border-radius-rounded: 50%;
+
+  /* Input Styles */
+  --lmd-input-bg: rgb(50 53 69 / 30%);
+  --lmd-input-border: rgba(255, 255, 255, 0.1);
+  --lmd-input-border-hover: rgba(255, 255, 255, 0.2);
+  --lmd-input-border-size: 1px;
+
+  --lmd-input-success-bg: rgba(20, 245, 193, 0.1);
+  --lmd-input-success-color: rgba(20, 245, 193, 1);
+  --lmd-input-success-border: rgba(20, 245, 193, 0.4);
+  --lmd-input-success-border-hover: rgba(20, 245, 193, 0.6);
+
+  --lmd-input-warning-bg: rgba(242, 201, 76, 0.1);
+  --lmd-input-warning-border: rgba(242, 201, 76, 0.4);
+  --lmd-input-warning-border-hover: rgba(242, 201, 76, 0.6);
+
+  --lmd-input-error-bg: rgba(251, 61, 61, 0.1);
+  --lmd-input-error-border: rgba(251, 61, 61, 0.4);
+
+  /* Shadows Styles */
+
+  --lmd-grid-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 30px 5px rgba(0, 0, 0, 0.08), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  --lmd-grid-shadow-inverted: 0 -16px 24px 2px rgb(0 0 0 / 10%), 0 -6px 30px 5px rgb(0 0 0 / 8%), 0 -8px 10px -5px rgb(0 0 0 / 20%);
+
+  --lmd-hover-shadow: inset 0 0 0 2px #ffffff12;
+  --lmd-hover-shadow-primary: inset 0 0 0 2px rgba(20, 245, 193, 0.1);
+
+  --lmd-modal-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%), 0 13px 19px 2px rgb(0 0 0 / 14%), 0 5px 24px 4px rgb(0 0 0 / 12%);
+
+  --lmd-panel-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --lmd-panel-shadow-bold: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}

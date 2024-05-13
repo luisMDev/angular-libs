@@ -1,0 +1,112 @@
+@import 'flex-box-mixins.scss';
+
+.cdk-overlay-container {
+  z-index: 100000000000 !important;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+  border-radius: var(--lmd-border-radius-3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
+  color: hsla(var(--lmd-text-600), 1);
+  padding: var(--lmd-p-1);
+  margin: 0;
+  background: var(--color-bg-800);
+  border: none;
+  li {
+    border-radius: var(--lmd-border-radius-2);
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+    }
+    :not(.passive) {
+      cursor: pointer;
+      &:hover {
+        background-color: hsla(var(--lmd-bg-200), 1);
+        a {
+          color: hsla(var(--lmd-text-500), 1);
+          b {
+            color: hsla(var(--lmd-text-400), 1);
+          }
+        }
+        i {
+          color: hsla(var(--lmd-text-500), 1) !important;
+        }
+      }
+    }
+    i {
+      margin-right: var(--lmd-p-1);
+    }
+    img {
+      margin-right: var(--lmd-p-1);
+      height: 18px;
+    }
+    a {
+      min-height: 32px;
+      padding: 6px 8px;
+      color: hsla(var(--lmd-text-600), 1);
+      font-weight: 500;
+      font-size: var(--lmd-font-size-2);
+      text-decoration: none !important;
+      width: 100%;
+      @include flex(row, flex-start, center);
+      border-radius: var(--lmd-border-radius-1);
+      dx-ui-switch {
+        margin-right: var(--lmd-p-2);
+      }
+      b {
+        color: hsla(var(--lmd-text-600), 1);
+        text-transform: capitalize;
+      }
+      &.hasSubMenu {
+        &::before {
+          display: none;
+        }
+        &::after {
+          content: '\f0da';
+          font-family: 'Font Awesome 6 Pro';
+          font-weight: 900;
+          margin-left: var(--lmd-p-1);
+        }
+      }
+    }
+    .avatar {
+      width: 25px;
+      object-fit: cover;
+      object-position: top;
+      margin-right: var(--lmd-p-1);
+    }
+    &.divider {
+      padding: 0;
+      overflow: hidden;
+      margin: 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0;
+      background: transparent;
+      min-height: 0;
+    }
+    &.title {
+      cursor: default;
+      pointer-events: none;
+      a {
+        font-weight: bold;
+        color: hsla(var(--lmd-text-400), 1);
+        font-size: var(--lmd-font-size-1);
+      }
+    }
+    &.disabled {
+      &:hover {
+        background-color: transparent;
+        cursor: default;
+        a {
+          cursor: default;
+          color: hsla(var(--lmd-text-600), 1);
+        }
+      }
+    }
+  }
+}

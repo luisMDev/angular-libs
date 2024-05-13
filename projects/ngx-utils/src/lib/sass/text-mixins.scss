@@ -1,0 +1,81 @@
+@mixin text($type: 'default', $size: 1, $weight: 500, $link: false) {
+  @include text-type($type);
+  @include text-size($size);
+  @include text-weight($weight);
+
+  @if $link == true {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@mixin text-type($type: 'default') {
+  @if $type == 'default' {
+    color: hsla(var(--lmd-text-600), 1);
+  } @else if $type == 'highlight' {
+    color: hsla(var(--lmd-text-500), 1);
+  } @else if $type == 'low' {
+    color: hsla(var(--lmd-text-700), 1);
+  } @else {
+    @include text-color($type);
+  }
+}
+
+@mixin text-size($size: 1) {
+  @if $size == 0 {
+    font-size: var(--lmd-font-size-0);
+  } @else if $size == 1 {
+    font-size: var(--lmd-font-size-1);
+  } @else if $size == 2 {
+    font-size: var(--lmd-font-size-2);
+  } @else if $size == 3 {
+    font-size: var(--lmd-font-size-3);
+  } @else if $size == 4 {
+    font-size: var(--lmd-font-size-4);
+  } @else if $size == 4 {
+    font-size: var(--lmd-font-size-4);
+  } @else if $size == 5 {
+    font-size: var(--lmd-font-size-5);
+  } @else if $size == 6 {
+    font-size: var(--lmd-font-size-6);
+  } @else if $size == 7 {
+    font-size: var(--lmd-font-size-7);
+  } @else if $size == 8 {
+    font-size: var(--lmd-font-size-8);
+  } @else if $size == 9 {
+    font-size: var(--lmd-font-size-8);
+  } @else if $size == 10 {
+    font-size: var(--lmd-font-size-8);
+  } @else if $size == 11 {
+    font-size: var(--lmd-font-size-8);
+  } @else if $size == 12 {
+    font-size: var(--lmd-font-size-8);
+  } @else if $size == 13 {
+    font-size: var(--lmd-font-size-8);
+  } @else {
+    font-size: $size;
+  }
+}
+
+@mixin text-weight($weight: 500) {
+  font-weight: $weight;
+}
+
+@mixin text-color($color: hsla(var(--lmd-text-600), 1)) {
+  color: $color;
+}
+
+@mixin ellipsis($numLines: 1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: clip;
+
+  @supports (-webkit-line-clamp: $numLines) {
+    overflow: clip;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+  }
+}

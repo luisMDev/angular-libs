@@ -1,0 +1,9 @@
+@mixin grid($columns: 4, $column-gap: var(--lmd-p-4), $row-gap: var(--lmd-p-4), $autofill: null, $fr: 1fr) {
+  display: grid;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  grid-template-columns: repeat($columns, $fr);
+  @if $autofill != null {
+    grid-template-columns: repeat(auto-fill, percentage(100 / $columns/100));
+  }
+}
