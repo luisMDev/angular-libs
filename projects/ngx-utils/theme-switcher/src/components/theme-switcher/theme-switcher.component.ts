@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { ThemeSwitcherService } from '../../public_api';
 
 @Component({
-  selector: 'landing-starter-theme-switcher',
+  selector: 'lmdev-theme-switcher',
   templateUrl: './theme-switcher.component.html',
   styleUrl: './theme-switcher.component.scss',
   standalone: true,
@@ -15,7 +15,6 @@ export class ThemeSwitcherComponent {
   public theme$$: Signal<string> = this.themeSwitcherService.theme$$;
 
   public toggleTheme(): void {
-    asd;
     this.themeSwitcherService.toggleTheme();
   }
 }
