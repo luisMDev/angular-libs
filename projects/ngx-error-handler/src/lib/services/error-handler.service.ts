@@ -23,7 +23,7 @@ export class GlobalErrorHandler extends ErrorHandler {
       error = error.rejection; // get the error object
     }
 
-    const errorMessage = `${error.status} ${error.message}`;
+    const errorMessage = `${error?.status} ${error?.message}`;
 
     this.zone.run(() => this.toastService.showError(errorMessage));
 
