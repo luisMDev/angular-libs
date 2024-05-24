@@ -1,11 +1,6 @@
-import {
-  HttpErrorResponse,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-} from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ToastrWrapperService } from '../services/toastr-wrapper.service';
 
@@ -13,7 +8,7 @@ import { ToastrWrapperService } from '../services/toastr-wrapper.service';
 export class HttpErrorInterceptor implements HttpInterceptor {
   constructor(private toastrWrapperService: ToastrWrapperService) {}
 
-  intercept(req: HttpRequest<any>, next: HttpHandler) {
+  public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
       catchError((error) => {
         let errorMessage = '';
@@ -32,7 +27,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         this.toastrWrapperService.showError(errorMessage);
 
         return throwError(() => new Error(errorMessage));
-      })
+      }),
     );
   }
 }

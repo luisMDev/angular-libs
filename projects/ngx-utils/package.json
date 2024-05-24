@@ -1,6 +1,6 @@
 {
   "name": "@luismdev/ngx-utils",
-  "version": "0.1.9",
+  "version": "0.1.12",
   "peerDependencies": {
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
